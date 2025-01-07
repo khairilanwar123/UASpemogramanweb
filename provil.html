@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css"/>
+    <title>My koperasi!</title>
+    <style>
+      body {
+        min-height: 800px;
+      }
+
+      @keyframes slideInFade {
+        0% {
+          transform: translateX(100%); 
+          opacity: 0;
+        }
+        100% {
+          transform: translateX(0);   
+          opacity: 1;
+        }
+      }
+
+      .slide-in-fade {
+        animation: slideInFade 1s ease-in-out forwards;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary shadow-sm">
+      <div class="container">
+        <a class="navbar-brand" href="#">My Koperasi</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html">beranda</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="provil.html" id="profilLink">Profil</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="transaksi.html">Transaksi</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Login
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="login.html">Login</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="jumbotron jumbotron text-center">
+      <img src="logocelengan.png" alt="logocelengan" width="200"/>
+      <section id="projek">
+        <div class="container">
+          <div class="row text-center">
+            <div class="col">
+              <h3>Profil My Koperasi</h3>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 col-md-6">
+              <h4>Sejarah My Koperasi</h4>
+              <p>
+                My Koperasi didirikan pada tahun 2023 dengan tujuan untuk membantu masyarakat dalam mengelola keuangan mereka melalui berbagai layanan yang bersifat inklusif dan berorientasi pada kesejahteraan bersama. Koperasi ini hadir sebagai solusi bagi kebutuhan finansial dengan memberikan layanan pinjaman, tabungan, dan investasi yang ramah anggota.
+              </p>
+            </div>
+            <div class="col-12 col-md-6">
+              <h4>Visi dan Misi</h4>
+              <p><strong>Visi:</strong> Menjadi koperasi terdepan dalam mendukung kesejahteraan anggota melalui pelayanan keuangan yang adil dan transparan.</p>
+              <p><strong>Misi:</strong></p>
+              <ul>
+                <li>Menyediakan layanan keuangan yang mudah diakses oleh semua anggota koperasi.</li>
+                <li>Memberikan pinjaman dengan bunga rendah untuk mendukung kegiatan ekonomi anggota.</li>
+                <li>Mengutamakan prinsip-prinsip koperasi yang saling menguntungkan antar anggota.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <h4>Tim Kami</h4>
+              <p>
+                Tim di balik My Koperasi terdiri dari para profesional yang berdedikasi untuk memberikan layanan terbaik bagi anggota kami. Setiap anggota tim membawa keahlian dan pengalaman di bidang keuangan, teknologi, dan manajemen koperasi, yang memungkinkan kami untuk terus berkembang dan memenuhi kebutuhan anggota.
+              </p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <h4>Tujuan Kami</h4>
+              <p>
+                Tujuan utama kami adalah untuk menciptakan koperasi yang dapat memberikan manfaat langsung kepada anggotanya. Dengan sistem yang transparan dan adil, kami ingin menciptakan lingkungan yang kondusif bagi pengembangan ekonomi anggota, serta memperkuat solidaritas antar sesama.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <footer class="bg-primary text-white text-center py-3">
+      <p>&copy; 2025 My Koperasi. All rights reserved.</p>
+      <p>
+        <a href="contact.html" class="text-white">Contact Us</a> | 
+        <a href="privacy.html" class="text-white">Privacy Policy</a>
+      </p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        const profilLink = document.getElementById('profilLink');
+        const profilSection = document.querySelector('#projek');
+
+        profilLink.addEventListener('click', function(event) {
+          event.preventDefault(); 
+
+          profilSection.classList.remove('slide-in-fade');
+          
+          setTimeout(function() {
+            profilSection.classList.add('slide-in-fade');
+          }, 100); 
+
+          setTimeout(function() {
+            window.location.href = profilLink.getAttribute('href');
+          }, 1000); 
+        });
+      });
+    </script>
+  </body>
+</html>
